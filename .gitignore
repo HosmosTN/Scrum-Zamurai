@@ -1,5 +1,9 @@
-tmp/*
-config/database.php
-app/config/database.php
-!empty
-/nbproject/private/
+/app/Config
+/app/tmp
+/lib/Cake/Console/Templates/skel/tmp/
+/plugins
+/vendors
+/build
+/dist
+.DS_Store
+/tags
