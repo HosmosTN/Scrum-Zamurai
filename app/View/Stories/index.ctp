@@ -3,7 +3,7 @@
 <table>
 	<?php
 		echo $this->Html->tableHeaders(array(
-			'id', 'description', 'status', 'actions'
+			'id', 'description', 'sprint', 'status', 'actions'
 		));
 
 		foreach ($stories as $row) {
@@ -11,6 +11,7 @@
 			echo $this->Html->tableCells(array(array(
 				$this->Html->link($s['id'], array('action' => 'edit', $s['id'])),
 				$s['description'],
+				$row['Sprint']['name'],
 				$s['status'],
 				'Edit Delete'
 			)));
