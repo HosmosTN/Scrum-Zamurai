@@ -276,3 +276,9 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+/**
+ * Admin scaffolding routing.
+ * see http://book.cakephp.org/2.0/en/controllers/scaffolding.html#creating-a-simple-admin-interface-with-scaffolding
+ */
+Configure::write('Routing.prefixes', array('admin'));
