@@ -38,4 +38,10 @@ class StoryTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+	/**
+	 * Dummy test to ignore 'No tests found in class' error.
+	 */
+	public function testDummy() {
+
+	}
 }
