@@ -18,12 +18,13 @@ class StoriesController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			if ($this->Story->save($this->request->data)) {
-				$this->Session->setFlash('The story has been saved.');
+				$this->Session->setFlash("Story has been saved.");
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash('Unable to add the story.');
+				$this->Session->setFlash("Unable to add the Story.");
 			}
 		}
+
 		$this->set('sprints', $this->Story->Sprint->find('list'));
 	}
 

@@ -33,4 +33,13 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	public $components = array('DebugKit.Toolbar');
+
+	/**
+	 * If input 'BooksController', ouput is 'Book'.
+	 *
+	 * @return string
+	 */
+	protected function singluarClassName() {
+		return Inflector::singularize(str_replace('Controller', '', get_class($this)));
+	}
 }
