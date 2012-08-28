@@ -7,5 +7,6 @@
 	echo $this->Form->input('status');
 	echo $this->Form->input('priority');
 	echo $this->Form->input('record');
-	echo $this->Form->end('Add story');
+	echo $this->Form->submit('Add', array('class'=>'btn btn-primary'));
+    echo $this->Form->end();
 ?>

@@ -13,8 +13,8 @@
 				$s['description'],
 				$row['Sprint']['name'],
 				$s['status'],
-				$this->Html->link('Edit', array('action' => 'edit', $s['id']), array('class' => 'btn'))
-					. ' ' . $this->Html->link('<i class="icon-remove"></i>', array('action' => 'delete', $s['id']), array('class' => 'btn btn-danger', 'escape' => false))
+				$this->Html->link('<i class="icon-pencil"></i>', array('action' => 'edit', $s['id']), array('escape' => false, 'title' => 'Edit'))
+					. ' ' . $this->Html->link('<i class="icon-remove"></i>', array('action' => 'delete', $s['id']), array('escape' => false, 'title' => 'Delete'))
 			)));
 		}
 	?>
