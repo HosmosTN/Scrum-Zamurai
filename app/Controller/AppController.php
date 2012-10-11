@@ -48,14 +48,14 @@ class AppController extends Controller {
 	 * @see <a href="http://stackoverflow.com/questions/3590097/how-to-overdrive-flash-message-default-of-cakephp">How to overdrive FLASH MESSAGE default of cakePHP - Stack Overflow</a>
 	 */
 	public function beforeRender() {
-		if ($this->Session->check('Message.flash')) {
-        $flash = $this->Session->read('Message.flash');
-
-        if ($flash['element'] == 'default') {
-            $flash['element'] = 'flash/default';
-            $this->Session->write('Message.flash', $flash);
-        }
-    }
+//		if ($this->Session->check('Message.flash')) {
+//        $flash = $this->Session->read('Message.flash');
+//
+//        if ($flash['element'] == 'default') {
+//            $flash['element'] = 'flash/default';
+//            $this->Session->write('Message.flash', $flash);
+//        }
+//    }
 
 	}
 }
