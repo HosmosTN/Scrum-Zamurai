@@ -23,9 +23,11 @@
 	<title>
 		<?php echo $title_for_layout; ?>
 	</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" type="text/css" media="screen" charset="utf-8"/>
+    <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('bootstrap.min');
 
 		echo $this->fetch('meta');
@@ -39,7 +41,7 @@
 			<nav class="navbar navbar-static-top">
 				<div class="navbar-inner">
 
-					<?php echo $this->Html->link('Scrum Zamurai', '/', array('class' => 'brand')); ?>
+					<?php echo $this->Html->link('SZ', '/', array('class' => 'brand')); ?>
 				</div><!-- /.navbar-inner -->
 			</nav><!-- /.navbar -->
 		</header>
