@@ -39,18 +39,18 @@ class StoryFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'created' => '2012-10-12 16:14:48',
-			'modified' => '2012-10-12 16:14:48',
+			'created' => '2001-01-01 00:00:00:00',
+			'modified' => '2001-01-01 00:00:01',
 			'sprint_id' => 1,
-			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'status' => 'Lorem ipsum dolor sit amet',
-			'priority' => 'Lorem ipsum dolor sit amet',
+			'description' => 'description 1',
+			'status' => 'open',
+			'priority' => 'high',
 			'estimate' => 1,
 			'result' => 1,
 			'begin' => '2012-10-12 16:14:48',
 			'end' => '2012-10-12 16:14:48',
 			'order' => 1,
-			'parent_id' => 1
+			'parent_id' => 0
 		),
 	);
 

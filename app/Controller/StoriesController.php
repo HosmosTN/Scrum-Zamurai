@@ -19,8 +19,10 @@ class StoriesController extends AppController {
 		if ($this->request->is('post')) {
 			if ($this->Story->save($this->request->data)) {
 				$this->Session->setFlash("Story has been saved.");
-				$this->redirect(array('action' => 'index'));
+                $this->set('saved', true);
+				return $this->redirect(array('action' => 'index'));
 			} else {
+                $this->set('saved', false);
 				$this->Session->setFlash("Unable to add the Story.");
 			}
 		}
@@ -35,10 +37,14 @@ class StoriesController extends AppController {
 		} else {
 			if ($this->Story->save($this->request->data)) {
 				$this->Session->setFlash('The story has been updated.');
-				$this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash('Unable to update the story.');
 			}
 		}
 	}
+
+    public function swap() {
+        return true;
+    }
 }

@@ -92,4 +92,21 @@ class Story extends AppModel {
 		)
 	);
 
+    /**
+     * Returns max order number in the sprint.
+     *
+     * @param int $sprint_id
+     * @return int max order (false if not found)
+     */
+    public function getMaxOrder($sprint_id) {
+        $result =  $this->find('first', array(
+            'conditions' => array(
+                'Story.sprint_id' => $sprint_id
+            ),
+            'fields' => array('MAX(Story.order) AS max_order')
+        ));
+
+        return isset($result[0]['max_order']) ? (int)$result[0]['max_order'] : false;
+    }
+
 }
