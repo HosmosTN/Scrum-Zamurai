@@ -14,10 +14,10 @@ class StoryTest extends MyCakeTestCase {
 	 *
 	 * @var array
 	 */
-//	public $fixtures = array(
-//		'app.story',
-//		'app.sprint'
-//	);
+	public $fixtures = array(
+		'app.story',
+		'app.sprint'
+	);
 
     /**
      * @var Story
@@ -35,8 +35,8 @@ class StoryTest extends MyCakeTestCase {
 		$this->Story = ClassRegistry::init('Story');
 		$this->Story = new Story;
 
-        $this->_pdo->exec('DROP TABLE IF EXISTS stories;');
-        $this->_pdo->exec('CREATE TABLE stories (id INT, name TEXT);');
+//        $this->_pdo->exec('DROP TABLE IF EXISTS stories;');
+//        $this->_pdo->exec('CREATE TABLE stories (id INT, name TEXT);');
 	}
 
 	/**
@@ -51,7 +51,13 @@ class StoryTest extends MyCakeTestCase {
 	}
 
 	public function testAddStory() {
-        $this->Story->save('');
+        $input = array(
+            'story' => array(
+                'id' => 1,
+                'name' => 'story 1',
+            )
+        );
+        $this->Story->save($input);
         $this->markTestIncomplete();
 	}
 
