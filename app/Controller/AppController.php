@@ -32,30 +32,4 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	public $components = array('DebugKit.Toolbar');
-
-	/**
-	 * If input 'BooksController', ouput is 'Book'.
-	 *
-	 * @return string
-	 */
-	protected function singluarClassName() {
-		return Inflector::singularize(str_replace('Controller', '', get_class($this)));
-	}
-
-	/**
-	 *
-	 * @see <a href="http://stackoverflow.com/questions/3590097/how-to-overdrive-flash-message-default-of-cakephp">How to overdrive FLASH MESSAGE default of cakePHP - Stack Overflow</a>
-	 */
-	public function beforeRender() {
-//		if ($this->Session->check('Message.flash')) {
-//        $flash = $this->Session->read('Message.flash');
-//
-//        if ($flash['element'] == 'default') {
-//            $flash['element'] = 'flash/default';
-//            $this->Session->write('Message.flash', $flash);
-//        }
-//    }
-
-	}
 }
