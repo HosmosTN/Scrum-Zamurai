@@ -1,12 +1,13 @@
 <?php
 
 App::uses('Story', 'Model');
+App::uses('MyCakeTestCase', 'Lib');
 
 /**
  * Story Test Case
  *
  */
-class StoryTest extends CakeTestCase {
+class StoryTest extends MyCakeTestCase {
 
 	/**
 	 * Fixtures
@@ -18,6 +19,11 @@ class StoryTest extends CakeTestCase {
 //		'app.sprint'
 //	);
 
+    /**
+     * @var Story
+     */
+    protected $Story;
+
 	/**
 	 * setUp method
 	 *
@@ -25,9 +31,12 @@ class StoryTest extends CakeTestCase {
 	 */
 	public function setUp() {
 		parent::setUp();
-		var_dump(class_exists('ClassRegistry'));
+
 		$this->Story = ClassRegistry::init('Story');
-//		$this->Story = new Story;
+		$this->Story = new Story;
+
+        $this->_pdo->exec('DROP TABLE IF EXISTS stories;');
+        $this->_pdo->exec('CREATE TABLE stories (id INT, name TEXT);');
 	}
 
 	/**
@@ -42,7 +51,8 @@ class StoryTest extends CakeTestCase {
 	}
 
 	public function testAddStory() {
-		$this->markTestIncomplete();
+        $this->Story->save('');
+        $this->markTestIncomplete();
 	}
 
 }
