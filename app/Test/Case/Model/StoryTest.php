@@ -1,4 +1,5 @@
 <?php
+
 App::uses('Story', 'Model');
 
 /**
@@ -6,42 +7,40 @@ App::uses('Story', 'Model');
  *
  */
 class StoryTest extends CakeTestCase {
+//
+//	/**
+//	 * Fixtures
+//	 *
+//	 * @var array
+//	 */
+//	public $fixtures = array(
+//		'app.story',
+//		'app.sprint'
+//	);
 
-/**
- * Fixtures
- *
- * @var array
- */
-	public $fixtures = array(
-		'app.story',
-		'app.sprint'
-	);
-
-/**
- * setUp method
- *
- * @return void
- */
+	/**
+	 * setUp method
+	 *
+	 * @return void
+	 */
 	public function setUp() {
 		parent::setUp();
 		$this->Story = ClassRegistry::init('Story');
 	}
 
-/**
- * tearDown method
- *
- * @return void
- */
+	/**
+	 * tearDown method
+	 *
+	 * @return void
+	 */
 	public function tearDown() {
 		unset($this->Story);
 
 		parent::tearDown();
 	}
 
-	/**
-	 * Dummy test to ignore 'No tests found in class' error.
-	 */
-	public function testDummy() {
-
+	public function testAddStory() {
+		$this->markTestImcomplete();
 	}
+
 }
