@@ -44,9 +44,32 @@ class StoryTest extends CakeTestCase {
     }
 
     /**
+     * @covers Story::add
+     */
+    public function testAdd() {
+        $data = array(
+            'Story' => array(
+                'sprint_id' => 0
+            )
+        );
+        $this->assertTrue($this->Story->add($data));
+    }
+
+    /**
+     * @covers Story::add
+     */
+    public function testAddFailsWithInvalidInput() {
+        $data = array(
+            'IN' => array('VA' => 'LID')
+        );
+        $this->assertFalse($this->Story->add($data));
+    }
+
+
+    /**
      * @covers Story::getMaxOrder
      */
-    public function testGetMaxOrderNumber() {
+    public function testGetMaxOrder() {
         $this->assertSame(1, $this->Story->getMaxOrder(1));
     }
 
