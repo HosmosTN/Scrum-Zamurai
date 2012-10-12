@@ -1,4 +1,5 @@
 <?php
+
 App::uses('Sprint', 'Model');
 
 /**
@@ -7,31 +8,31 @@ App::uses('Sprint', 'Model');
  */
 class SprintTest extends CakeTestCase {
 
-/**
- * Fixtures
- *
- * @var array
- */
+	/**
+	 * Fixtures
+	 *
+	 * @var array
+	 */
 	public $fixtures = array(
 		'app.sprint',
 		'app.story'
 	);
 
-/**
- * setUp method
- *
- * @return void
- */
+	/**
+	 * setUp method
+	 *
+	 * @return void
+	 */
 	public function setUp() {
 		parent::setUp();
-		$this->Sprint = ClassRegistry::init('Sprint');
+		$this->Sprint = new Sprint;
 	}
 
-/**
- * tearDown method
- *
- * @return void
- */
+	/**
+	 * tearDown method
+	 *
+	 * @return void
+	 */
 	public function tearDown() {
 		unset($this->Sprint);
 

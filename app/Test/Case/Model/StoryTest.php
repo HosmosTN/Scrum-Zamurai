@@ -7,12 +7,12 @@ App::uses('Story', 'Model');
  *
  */
 class StoryTest extends CakeTestCase {
-//
-//	/**
-//	 * Fixtures
-//	 *
-//	 * @var array
-//	 */
+
+	/**
+	 * Fixtures
+	 *
+	 * @var array
+	 */
 //	public $fixtures = array(
 //		'app.story',
 //		'app.sprint'
@@ -25,7 +25,9 @@ class StoryTest extends CakeTestCase {
 	 */
 	public function setUp() {
 		parent::setUp();
+		var_dump(class_exists('ClassRegistry'));
 		$this->Story = ClassRegistry::init('Story');
+//		$this->Story = new Story;
 	}
 
 	/**
@@ -40,7 +42,7 @@ class StoryTest extends CakeTestCase {
 	}
 
 	public function testAddStory() {
-		$this->markTestImcomplete();
+		$this->markTestIncomplete();
 	}
 
 }
