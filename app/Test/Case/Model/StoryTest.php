@@ -86,11 +86,20 @@ class StoryTest extends CakeTestCase {
         $this->assertEquals(1, $data2['Story']['order']);
     }
 
+    public function forTestSwapFailsIfBothOrEachIdIsNotFound() {
+        return array(
+            array(1, 100000000),
+            array(100000000, 1),
+            array(100000000, 100000001),
+        );
+    }
+
     /**
      * @covers Story::swap
+     * @dataProvider forTestSwapFailsIfBothOrEachIdIsNotFound
      */
-    public function testSwapFailsIfBothOrEachIdIsNotFound() {
-        $this->markTestIncomplete();
+    public function testSwapFailsIfBothOrEachIdIsNotFound($story_id1, $story_id2) {
+        $this->assertFalse($this->Story->swap($story_id1, $story_id2));
     }
 
 }

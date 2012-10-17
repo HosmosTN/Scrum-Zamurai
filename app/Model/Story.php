@@ -143,9 +143,6 @@ class Story extends AppModel {
 
         $order1 = $story1['Story']['order'];
         $order2 = $story2['Story']['order'];
-//        $order_tmp = $story1['Story']['order'];
-//        $story1['Story']['order'] = $story2['Story']['order'];
-//        $story2['Story']['order'] = $order_tmp;
 
         $data = array(
             array('Story' => array('id' => $story_id1, 'order' => $order2)),
@@ -153,11 +150,6 @@ class Story extends AppModel {
         );
 
         return $this->saveMany($data, array('atomic' => true));
-
-//        $datasource = $this->getDataSource();
-//        $datasource->begin();
-//
-//        $datasource->commit();
     }
 
 }
