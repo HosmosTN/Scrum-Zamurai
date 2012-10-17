@@ -126,4 +126,38 @@ class Story extends AppModel {
         return isset($result[0]['max_order']) ? (int) $result[0]['max_order'] : false;
     }
 
+    /**
+     * Swaps the order of two rows.
+     *
+     * @param int $story_id1
+     * @param int $story_id2
+     * @return boolean
+     */
+    public function swap($story_id1, $story_id2) {
+        $story1 = $this->findById($story_id1);
+        $story2 = $this->findById($story_id2);
+
+        if (!$story1 || !$story2 || !isset($story1['Story']['order']) || !isset($story2['Story']['order'])) {
+            return false;
+        }
+
+        $order1 = $story1['Story']['order'];
+        $order2 = $story2['Story']['order'];
+//        $order_tmp = $story1['Story']['order'];
+//        $story1['Story']['order'] = $story2['Story']['order'];
+//        $story2['Story']['order'] = $order_tmp;
+
+        $data = array(
+            array('Story' => array('id' => $story_id1, 'order' => $order2)),
+            array('Story' => array('id' => $story_id2, 'order' => $order1)),
+        );
+
+        return $this->saveMany($data, array('atomic' => true));
+
+//        $datasource = $this->getDataSource();
+//        $datasource->begin();
+//
+//        $datasource->commit();
+    }
+
 }

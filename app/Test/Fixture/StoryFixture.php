@@ -47,9 +47,24 @@ class StoryFixture extends CakeTestFixture {
 			'priority' => 'high',
 			'estimate' => 1,
 			'result' => 1,
-			'begin' => '2012-10-12 16:14:48',
-			'end' => '2012-10-12 16:14:48',
+			'begin' => '2012-01-01 00:00:00',
+			'end' => '2012-01-01 00:00:01',
 			'order' => 1,
+			'parent_id' => 0
+		),
+        array(
+			'id' => 2,
+			'created' => '2001-02-02 00:00:00:00',
+			'modified' => '2001-02-02 00:00:01',
+			'sprint_id' => 2,
+			'description' => 'description 2',
+			'status' => 'close',
+			'priority' => 'low',
+			'estimate' => 2,
+			'result' => 2,
+			'begin' => '2012-01-01 00:00:00',
+			'end' => '2012-01-01 00:00:01',
+			'order' => 2,
 			'parent_id' => 0
 		),
 	);

@@ -73,4 +73,24 @@ class StoryTest extends CakeTestCase {
         $this->assertSame(1, $this->Story->getMaxOrder(1));
     }
 
+    /**
+     * @covers Story::swap
+     */
+    public function testSwap() {
+        $this->assertTrue($this->Story->swap(1, 2));
+
+        $data1 = $this->Story->findById(1, array('order'));
+        $this->assertEquals(2, $data1['Story']['order']);
+
+        $data2 = $this->Story->findById(2, array('order'));
+        $this->assertEquals(1, $data2['Story']['order']);
+    }
+
+    /**
+     * @covers Story::swap
+     */
+    public function testSwapFailsIfBothOrEachIdIsNotFound() {
+        $this->markTestIncomplete();
+    }
+
 }
