@@ -57,6 +57,5 @@
 			<?php echo $this->Html->link('(c) Scrum Zamurai', '/'); ?>
 		</div><!-- /#footer -->
 	</div><!-- /.container -->
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
