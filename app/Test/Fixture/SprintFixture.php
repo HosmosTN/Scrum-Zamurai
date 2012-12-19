@@ -15,8 +15,8 @@ class SprintFixture extends CakeTestFixture {
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'begin' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'end' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'description' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'status' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 45, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -31,11 +31,11 @@ class SprintFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'created' => '2012-10-12 16:16:49',
-			'modified' => '2012-10-12 16:16:49',
+			'created' => '2012-12-19 15:05:36',
+			'modified' => '2012-12-19 15:05:36',
 			'name' => 'Lorem ipsum dolor sit amet',
-			'begin' => '2012-10-12 16:16:49',
-			'end' => '2012-10-12 16:16:49'
+			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'status' => 'Lorem ipsum dolor sit amet'
 		),
 	);
 

@@ -8,6 +8,13 @@ App::uses('AppModel', 'Model');
 class Sprint extends AppModel {
 
 /**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'name';
+
+/**
  * Validation rules
  *
  * @var array
