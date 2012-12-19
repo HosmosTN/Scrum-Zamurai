@@ -14,19 +14,16 @@ class StoryFixture extends CakeTestFixture {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'sprint_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'description' => array('type' => 'text', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'status' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'priority' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'description' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'status' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 45, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'priority' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'estimate' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'result' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'begin' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'end' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'order' => array('type' => 'integer', 'null' => true, 'default' => '0'),
+		'record' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'parent_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'sprint_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'indexes' => array(
-			'PRIMARY' => array('column' => array('id', 'sprint_id'), 'unique' => 1),
-			'fk_stories_sprints_idx' => array('column' => 'sprint_id', 'unique' => 0)
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -39,33 +36,16 @@ class StoryFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'created' => '2001-01-01 00:00:00:00',
-			'modified' => '2001-01-01 00:00:01',
-			'sprint_id' => 1,
-			'description' => 'description 1',
-			'status' => 'open',
-			'priority' => 'high',
+			'created' => '2012-12-19 15:26:40',
+			'modified' => '2012-12-19 15:26:40',
+			'name' => 'Lorem ipsum dolor sit amet',
+			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'status' => 'Lorem ipsum dolor sit amet',
+			'priority' => 1,
 			'estimate' => 1,
-			'result' => 1,
-			'begin' => '2012-01-01 00:00:00',
-			'end' => '2012-01-01 00:00:01',
-			'order' => 1,
-			'parent_id' => 0
-		),
-        array(
-			'id' => 2,
-			'created' => '2001-02-02 00:00:00:00',
-			'modified' => '2001-02-02 00:00:01',
-			'sprint_id' => 2,
-			'description' => 'description 2',
-			'status' => 'close',
-			'priority' => 'low',
-			'estimate' => 2,
-			'result' => 2,
-			'begin' => '2012-01-01 00:00:00',
-			'end' => '2012-01-01 00:00:01',
-			'order' => 2,
-			'parent_id' => 0
+			'record' => 1,
+			'parent_id' => 1,
+			'sprint_id' => 1
 		),
 	);
 

@@ -45,7 +45,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Sprint'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New Sprint'), array('action' => 'add'), ['class' => 'btn']); ?></li>
 		<li><?php echo $this->Html->link(__('List Stories'), array('controller' => 'stories', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Story'), array('controller' => 'stories', 'action' => 'add')); ?> </li>
 	</ul>
