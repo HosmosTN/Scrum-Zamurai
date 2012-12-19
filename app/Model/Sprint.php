@@ -36,7 +36,7 @@ class Sprint extends AppModel {
 		],
 		'date_to' => [
 			'rule' => ['date'],
-			'message' => "Date from field's format must be 'Y-m-d'.",
+			'message' => "Date to field's format must be 'Y-m-d'.",
 		],
 	);
 
