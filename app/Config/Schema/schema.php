@@ -27,7 +27,7 @@ class AppSchema extends CakeSchema {
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'description' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'status' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 45, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'priority' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'priority' => array('type' => 'boolean', 'null' => true, 'default' => null, 'comment' => '0 = p0, 1 = p1, ..., 4 = p4'),
 		'estimate' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'record' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'parent_id' => array('type' => 'integer', 'null' => true, 'default' => null),
