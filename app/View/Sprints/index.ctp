@@ -8,6 +8,8 @@
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('status'); ?></th>
+			<th><?php echo $this->Paginator->sort('date_from'); ?></th>
+			<th><?php echo $this->Paginator->sort('date_to'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
@@ -19,6 +21,8 @@
 		<td><?php echo h($sprint['Sprint']['name']); ?>&nbsp;</td>
 		<td><?php echo h($sprint['Sprint']['description']); ?>&nbsp;</td>
 		<td><?php echo h($sprint['Sprint']['status']); ?>&nbsp;</td>
+		<td><?php echo h($sprint['Sprint']['date_from']); ?>&nbsp;</td>
+		<td><?php echo h($sprint['Sprint']['date_to']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $sprint['Sprint']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $sprint['Sprint']['id'])); ?>
@@ -45,7 +49,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Sprint'), array('action' => 'add'), ['class' => 'btn']); ?></li>
+		<li><?php echo $this->Html->link(__('New Sprint'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Stories'), array('controller' => 'stories', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Story'), array('controller' => 'stories', 'action' => 'add')); ?> </li>
 	</ul>

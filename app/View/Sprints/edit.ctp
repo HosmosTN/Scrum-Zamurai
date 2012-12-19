@@ -7,6 +7,8 @@
 		echo $this->Form->input('name');
 		echo $this->Form->input('description');
 		echo $this->Form->input('status');
+		echo $this->Form->input('date_from');
+		echo $this->Form->input('date_to');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

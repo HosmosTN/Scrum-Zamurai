@@ -31,6 +31,16 @@
 			<?php echo h($sprint['Sprint']['status']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Date From'); ?></dt>
+		<dd>
+			<?php echo h($sprint['Sprint']['date_from']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Date To'); ?></dt>
+		<dd>
+			<?php echo h($sprint['Sprint']['date_to']); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
