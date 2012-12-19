@@ -12,7 +12,7 @@ class SprintsController extends AppController {
 	public $helpers = array('Form', 'Html');
 
 	public function index() {
-		$this->set('sprints', $this->Story->find('all'));
+		$this->set('sprints', $this->Sprint->find('all'));
 	}
 
 	public function add() {
