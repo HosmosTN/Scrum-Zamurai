@@ -14,28 +14,46 @@ class Story extends AppModel {
  *
  * @var array
  */
-	public $validate = array(
-		'name' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+	public $validate = [
+		'name' => [
+			'notempty' => [
+				'rule' => ['notempty'],
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'sprint_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			],
+		],
+		'sprint_id' => [
+			'numeric' => [
+				'rule' => ['numeric'],
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-	);
+			],
+		],
+		'priority' => [
+			'rule' => ['custom', '/p[01234]/'],
+			'message' => 'Priority must be  p0, p1, ..., or p4.',
+		],
+		'status' => [
+			'rule' => ['inList', ['not started', 'in progress', 'completed', 'blocked']],
+			'message' => "Status must be 'not started', 'in progress', 'completed' or 'blocked'.",
+		],
+		'estimate' => [
+			'rule' => ['numeric'],
+			'message' => 'Estimate must be a number.',
+			'allowEmpty' => true,
+		],
+		'record' => [
+			'rule' => ['numeric'],
+			'message' => 'Record must be a number.',
+			'allowEmpty' => true,
+		],
+	];
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
